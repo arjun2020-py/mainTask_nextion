@@ -6,8 +6,7 @@ class TextfiledWidget extends StatelessWidget {
       required this.txt,
       required this.icon,
       required this.controller,
-      required this.vaildator
-      });
+      required this.vaildator});
 
   final String txt;
   final Widget icon;
@@ -17,17 +16,20 @@ class TextfiledWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(15),
-      child: TextFormField(
-        validator:vaildator ,
-        autovalidateMode: AutovalidateMode.onUserInteraction,
-        controller: controller,
-        decoration: InputDecoration(
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(20.0),
-            borderSide: BorderSide.none,
+      child: ConstrainedBox(
+        constraints: BoxConstraints(maxWidth: 450),
+        child: TextFormField(
+          validator: vaildator,
+          autovalidateMode: AutovalidateMode.onUserInteraction,
+          controller: controller,
+          decoration: InputDecoration(
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(20.0),
+              borderSide: BorderSide.none,
+            ),
+            prefixIcon: icon,
+            hintText: txt,
           ),
-          prefixIcon: icon,
-          hintText: txt,
         ),
       ),
     );

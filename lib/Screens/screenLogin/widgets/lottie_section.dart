@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:nextion_project/Screens/screenLogin/constants/login_const.dart';
+
+import '../../../Utils/constants/login_const.dart';
 
 class LottieSection extends StatelessWidget {
   const LottieSection({super.key, required this.hieght});

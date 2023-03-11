@@ -20,12 +20,10 @@ class LoginController extends GetxController {
 
   void login(String mob, String pass) async {
     isloading.value = true;
-    // log('initial');
-    // Future.delayed(Duration(seconds: 3));
+    
     Either<String, LoginResponseModel> result = await LoginRepositry()
         .login(LoginAuthModel(mobile: mob, password: pass));
     isloading.value = false;
-    log('----------------called loading------------------');
 
     result.fold(
         (left) => Get.showSnackbar(GetSnackBar(

@@ -4,10 +4,10 @@ import 'package:dio/dio.dart';
 import 'package:either_dart/either.dart';
 import 'package:flutter/foundation.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
-import 'package:nextion_project/Screens/screenLogin/constants/login_const.dart';
 import 'package:nextion_project/Screens/screenLogin/model/login_auth_model.dart';
 import 'package:nextion_project/Screens/screenLogin/model/login_reponse_model.dart';
 
+import '../../../Utils/constants/login_const.dart';
 import '../../../utils/expection/expection.dart';
 
 class LoginRepositry {
